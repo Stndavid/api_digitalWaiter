@@ -23,6 +23,8 @@ import { Categoria } from './menu/entity/category.entity';
 import { Inventario } from './inventory/entities/invemtory.entity';
 import { MetodoPago } from './payment-method/paymentMethod.entity';
 
+
+
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
@@ -66,6 +68,8 @@ import { MetodoPago } from './payment-method/paymentMethod.entity';
     ReservationsModule,
     MongoModule,
     AuthModule,
+
+   
   ],
 })
 export class AppModule {}

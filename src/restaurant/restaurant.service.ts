@@ -65,8 +65,9 @@ export class RestaurantService {
   async findRestaurantesByMesero(meseroId: number): Promise<Restaurante[]> {
     return this.restauranteRepository
       .createQueryBuilder('restaurante')
+      .leftJoin('restaurante.meseros', 'mesero')
       .leftJoinAndSelect('restaurante.owner', 'owner')
-      .leftJoinAndSelect('restaurante.meseros', 'mesero')
+      .leftJoinAndSelect('restaurante.meseros', 'meseros')
       .leftJoinAndSelect('restaurante.categorias', 'categorias')
       .leftJoinAndSelect('categorias.productos', 'productos')
       .where('mesero.id = :meseroId', { meseroId })

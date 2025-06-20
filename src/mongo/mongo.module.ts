@@ -5,7 +5,7 @@ import { MenuHistory, MenuHistorySchema } from './schemas/menuHistory.schema';
 import { Review, ReviewSchema } from './schemas/review.schema';
 import { MongoService } from './mongo.service';
 import { Notification, NotificationSchema } from './schemas/notification.schema';
-import { UserAction, UserActionSchema } from './schemas/userAction.schema';
+
 import { Restaurante, RestauranteSchema } from './schemas/restaurante.schema';
 
 @Module({
@@ -15,7 +15,7 @@ import { Restaurante, RestauranteSchema } from './schemas/restaurante.schema';
       { name: MenuHistory.name, schema: MenuHistorySchema },
       { name: Review.name, schema: ReviewSchema },
       { name: Notification.name, schema: NotificationSchema },
-      { name: UserAction.name, schema: UserActionSchema },
+
       { name: Restaurante.name, schema: RestauranteSchema },
     ]),
   ],
